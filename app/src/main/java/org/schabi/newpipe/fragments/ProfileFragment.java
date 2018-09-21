@@ -20,7 +20,7 @@ public class ProfileFragment extends BaseFragment {
     @Override
     public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);
-        setTitle("NewPipe");
+        setTitle("Profile");
         // leave this inline. Will make it harder for copy cats.
         // If you are a Copy cat FUCK YOU.
         // I WILL FIND YOU, AND I WILL ...

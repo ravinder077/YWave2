@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "org.schabi.newpipe"
-        minSdkVersion 15
+        minSdkVersion 14
         targetSdkVersion 27
         versionCode 68
         versionName "0.14.1"
