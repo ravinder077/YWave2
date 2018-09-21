@@ -12,6 +12,7 @@ import com.grack.nanojson.JsonSink;
 import org.schabi.newpipe.R;
 import org.schabi.newpipe.extractor.exceptions.ExtractionException;
 import org.schabi.newpipe.fragments.BlankFragment;
+import org.schabi.newpipe.fragments.ProfileFragment;
 import org.schabi.newpipe.fragments.list.channel.ChannelFragment;
 import org.schabi.newpipe.fragments.list.kiosk.KioskFragment;
 import org.schabi.newpipe.local.bookmark.BookmarkFragment;
@@ -125,6 +126,8 @@ public abstract class Tab {
         BLANK(new BlankTab()),
         SUBSCRIPTIONS(new SubscriptionsTab()),
         FEED(new FeedTab()),
+        SETTINGS(new SettingTab()),
+        PROFILE(new ProfileTab()),
         BOOKMARKS(new BookmarksTab()),
         HISTORY(new HistoryTab()),
         KIOSK(new KioskTab()),
@@ -411,6 +414,56 @@ public abstract class Tab {
 
         public String getChannelName() {
             return channelName;
+        }
+    }
+
+    public static class SettingTab extends Tab {
+        public static final int ID = 7;
+
+        @Override
+        public int getTabId() {
+            return ID;
+        }
+
+        @Override
+        public String getTabName(Context context) {
+            return context.getString(R.string.fragment_settings);
+        }
+
+        @DrawableRes
+        @Override
+        public int getTabIconRes(Context context) {
+            return ThemeHelper.resolveResourceIdFromAttr(context, R.attr.settings);
+        }
+
+        @Override
+        public FeedFragment getFragment() {
+            return new FeedFragment();
+        }
+    }
+
+    public static class ProfileTab extends Tab {
+        public static final int ID = 8;
+
+        @Override
+        public int getTabId() {
+            return ID;
+        }
+
+        @Override
+        public String getTabName(Context context) {
+            return context.getString(R.string.profile);
+        }
+
+        @DrawableRes
+        @Override
+        public int getTabIconRes(Context context) {
+            return ThemeHelper.resolveResourceIdFromAttr(context, R.attr.profile);
+        }
+
+        @Override
+        public ProfileFragment getFragment() {
+            return new ProfileFragment();
         }
     }
 }

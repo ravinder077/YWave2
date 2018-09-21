@@ -68,6 +68,7 @@ public abstract class BaseLocalListFragment<I, N> extends BaseStateFragment<I>
         super.initViews(rootView, savedInstanceState);
 
         itemsList = rootView.findViewById(R.id.items_list);
+
         itemsList.setLayoutManager(getListLayoutManager());
 
         itemListAdapter = new LocalItemListAdapter(activity);

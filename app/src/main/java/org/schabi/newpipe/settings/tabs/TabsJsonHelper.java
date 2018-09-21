@@ -26,8 +26,9 @@ public class TabsJsonHelper {
 
     protected static final List<Tab> FALLBACK_INITIAL_TABS_LIST = Collections.unmodifiableList(Arrays.asList(
             new Tab.KioskTab(YouTube.getServiceId(), "Trending"),
+            Type.BOOKMARKS.getTab(),
             Type.SUBSCRIPTIONS.getTab(),
-            Type.BOOKMARKS.getTab()
+            Type.PROFILE.getTab()
     ));
 
     public static class InvalidJsonException extends Exception {

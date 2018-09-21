@@ -140,6 +140,12 @@ public class MainFragment extends BaseFragment implements TabLayout.OnTabSelecte
     public void updateTabs() {
         tabsList.clear();
         tabsList.addAll(tabsManager.getTabs());
+        for(Tab tab:tabsManager.getTabs())
+        {
+          System.err.println("tabs "+tab.getTabName(getContext()).toString());
+
+        }
+
         pagerAdapter.notifyDataSetChanged();
 
         viewPager.setOffscreenPageLimit(pagerAdapter.getCount());

@@ -43,9 +43,10 @@
         <item name="options">@drawable/ic_more_vert_black_24dp</item>
         <item name="play">@drawable/ic_play_arrow_black_24dp</item>
         <item name="settings">@drawable/ic_settings_black_24dp</item>
+        <item name="profile">@drawable/ic_person_black_24dp</item>
         <item name="ic_hot">@drawable/ic_whatshot_black_24dp</item>
-        <item name="ic_channel">@drawable/ic_channel_black_24dp</item>
-        <item name="ic_bookmark">@drawable/ic_bookmark_black_24dp</item>
+        <item name="ic_channel">@drawable/ic_radio_black_24dp</item>
+        <item name="ic_bookmark">@drawable/ic_live_tv_black_24dp</item>
         <item name="ic_playlist_add">@drawable/ic_playlist_add_black_24dp</item>
         <item name="ic_playlist_check">@drawable/ic_playlist_add_check_black_24dp</item>
         <item name="ic_import_export">@drawable/ic_import_export_black_24dp</item>
@@ -103,9 +104,10 @@
         <item name="options">@drawable/ic_more_vert_white_24dp</item>
         <item name="play">@drawable/ic_play_arrow_white_24dp</item>
         <item name="settings">@drawable/ic_settings_white_24dp</item>
+        <item name="profile">@drawable/ic_person_white_24dp</item>
         <item name="ic_hot">@drawable/ic_whatshot_white_24dp</item>
-        <item name="ic_channel">@drawable/ic_channel_white_24dp</item>
-        <item name="ic_bookmark">@drawable/ic_bookmark_white_24dp</item>
+        <item name="ic_channel">@drawable/ic_radio_white_24dp</item>
+        <item name="ic_bookmark">@drawable/ic_live_tv_white_24dp</item>
         <item name="ic_playlist_add">@drawable/ic_playlist_add_white_24dp</item>
         <item name="ic_playlist_check">@drawable/ic_playlist_add_check_white_24dp</item>
         <item name="ic_import_export">@drawable/ic_import_export_white_24dp</item>
