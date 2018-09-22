@@ -1,0 +1,47 @@
+{
+  "buildFiles": [
+    "C:\\audiostation\\NewPipeExtractor04\\YWave\\app\\src\\main\\jni\\Android.mk",
+    "C:\\audiostation\\NewPipeExtractor04\\YWave\\app\\src\\main\\jni\\Application.mk"
+  ],
+  "cleanCommands": [
+    "C:\\Users\\ravinder077\\AppData\\Local\\Android\\sdk\\ndk-bundle\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dC:\\audiostation\\NewPipeExtractor04\\YWave\\app\\src\\main\\jni\\Android.mk NDK_APPLICATION_MK\u003dC:\\audiostation\\NewPipeExtractor04\\YWave\\app\\src\\main\\jni\\Application.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-21 NDK_OUT\u003dC:/audiostation/NewPipeExtractor04/YWave/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003dC:\\audiostation\\NewPipeExtractor04\\YWave\\app\\build\\intermediates\\ndkBuild\\debug\\lib clean"
+  ],
+  "libraries": {
+    "shout-debug-arm64-v8a": {
+      "artifactName": "shout",
+      "buildCommand": "C:\\Users\\ravinder077\\AppData\\Local\\Android\\sdk\\ndk-bundle\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dC:\\audiostation\\NewPipeExtractor04\\YWave\\app\\src\\main\\jni\\Android.mk NDK_APPLICATION_MK\u003dC:\\audiostation\\NewPipeExtractor04\\YWave\\app\\src\\main\\jni\\Application.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-21 NDK_OUT\u003dC:/audiostation/NewPipeExtractor04/YWave/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003dC:\\audiostation\\NewPipeExtractor04\\YWave\\app\\build\\intermediates\\ndkBuild\\debug\\lib C:/audiostation/NewPipeExtractor04/YWave/app/build/intermediates/ndkBuild/debug/obj/local/arm64-v8a/libshout.so",
+      "abi": "arm64-v8a",
+      "output": "C:\\audiostation\\NewPipeExtractor04\\YWave\\app\\build\\intermediates\\ndkBuild\\debug\\obj\\local\\arm64-v8a\\libshout.so"
+    },
+    "opus-debug-arm64-v8a": {
+      "artifactName": "opus",
+      "buildCommand": "C:\\Users\\ravinder077\\AppData\\Local\\Android\\sdk\\ndk-bundle\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dC:\\audiostation\\NewPipeExtractor04\\YWave\\app\\src\\main\\jni\\Android.mk NDK_APPLICATION_MK\u003dC:\\audiostation\\NewPipeExtractor04\\YWave\\app\\src\\main\\jni\\Application.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-21 NDK_OUT\u003dC:/audiostation/NewPipeExtractor04/YWave/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003dC:\\audiostation\\NewPipeExtractor04\\YWave\\app\\build\\intermediates\\ndkBuild\\debug\\lib C:/audiostation/NewPipeExtractor04/YWave/app/build/intermediates/ndkBuild/debug/obj/local/arm64-v8a/libopus.so",
+      "abi": "arm64-v8a",
+      "output": "C:\\audiostation\\NewPipeExtractor04\\YWave\\app\\build\\intermediates\\ndkBuild\\debug\\obj\\local\\arm64-v8a\\libopus.so"
+    },
+    "vorbis-debug-arm64-v8a": {
+      "artifactName": "vorbis",
+      "buildCommand": "C:\\Users\\ravinder077\\AppData\\Local\\Android\\sdk\\ndk-bundle\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dC:\\audiostation\\NewPipeExtractor04\\YWave\\app\\src\\main\\jni\\Android.mk NDK_APPLICATION_MK\u003dC:\\audiostation\\NewPipeExtractor04\\YWave\\app\\src\\main\\jni\\Application.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-21 NDK_OUT\u003dC:/audiostation/NewPipeExtractor04/YWave/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003dC:\\audiostation\\NewPipeExtractor04\\YWave\\app\\build\\intermediates\\ndkBuild\\debug\\lib C:/audiostation/NewPipeExtractor04/YWave/app/build/intermediates/ndkBuild/debug/obj/local/arm64-v8a/libvorbis.so",
+      "abi": "arm64-v8a",
+      "output": "C:\\audiostation\\NewPipeExtractor04\\YWave\\app\\build\\intermediates\\ndkBuild\\debug\\obj\\local\\arm64-v8a\\libvorbis.so"
+    },
+    "ogg-debug-arm64-v8a": {
+      "artifactName": "ogg",
+      "buildCommand": "C:\\Users\\ravinder077\\AppData\\Local\\Android\\sdk\\ndk-bundle\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dC:\\audiostation\\NewPipeExtractor04\\YWave\\app\\src\\main\\jni\\Android.mk NDK_APPLICATION_MK\u003dC:\\audiostation\\NewPipeExtractor04\\YWave\\app\\src\\main\\jni\\Application.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-21 NDK_OUT\u003dC:/audiostation/NewPipeExtractor04/YWave/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003dC:\\audiostation\\NewPipeExtractor04\\YWave\\app\\build\\intermediates\\ndkBuild\\debug\\lib C:/audiostation/NewPipeExtractor04/YWave/app/build/intermediates/ndkBuild/debug/obj/local/arm64-v8a/libogg.so",
+      "abi": "arm64-v8a",
+      "output": "C:\\audiostation\\NewPipeExtractor04\\YWave\\app\\build\\intermediates\\ndkBuild\\debug\\obj\\local\\arm64-v8a\\libogg.so"
+    },
+    "coolmic-dsp-debug-arm64-v8a": {
+      "artifactName": "coolmic-dsp",
+      "buildCommand": "C:\\Users\\ravinder077\\AppData\\Local\\Android\\sdk\\ndk-bundle\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dC:\\audiostation\\NewPipeExtractor04\\YWave\\app\\src\\main\\jni\\Android.mk NDK_APPLICATION_MK\u003dC:\\audiostation\\NewPipeExtractor04\\YWave\\app\\src\\main\\jni\\Application.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-21 NDK_OUT\u003dC:/audiostation/NewPipeExtractor04/YWave/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003dC:\\audiostation\\NewPipeExtractor04\\YWave\\app\\build\\intermediates\\ndkBuild\\debug\\lib C:/audiostation/NewPipeExtractor04/YWave/app/build/intermediates/ndkBuild/debug/obj/local/arm64-v8a/libcoolmic-dsp.so",
+      "abi": "arm64-v8a",
+      "output": "C:\\audiostation\\NewPipeExtractor04\\YWave\\app\\build\\intermediates\\ndkBuild\\debug\\obj\\local\\arm64-v8a\\libcoolmic-dsp.so"
+    },
+    "coolmic-dsp-java-debug-arm64-v8a": {
+      "artifactName": "coolmic-dsp-java",
+      "buildCommand": "C:\\Users\\ravinder077\\AppData\\Local\\Android\\sdk\\ndk-bundle\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dC:\\audiostation\\NewPipeExtractor04\\YWave\\app\\src\\main\\jni\\Android.mk NDK_APPLICATION_MK\u003dC:\\audiostation\\NewPipeExtractor04\\YWave\\app\\src\\main\\jni\\Application.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-21 NDK_OUT\u003dC:/audiostation/NewPipeExtractor04/YWave/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003dC:\\audiostation\\NewPipeExtractor04\\YWave\\app\\build\\intermediates\\ndkBuild\\debug\\lib C:/audiostation/NewPipeExtractor04/YWave/app/build/intermediates/ndkBuild/debug/obj/local/arm64-v8a/libcoolmic-dsp-java.so",
+      "abi": "arm64-v8a",
+      "output": "C:\\audiostation\\NewPipeExtractor04\\YWave\\app\\build\\intermediates\\ndkBuild\\debug\\obj\\local\\arm64-v8a\\libcoolmic-dsp-java.so"
+    }
+  }
+}
