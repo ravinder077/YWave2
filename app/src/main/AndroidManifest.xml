@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="org.schabi.newpipe">
-
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
@@ -237,5 +237,34 @@
         <service
             android:name=".RouterActivity$FetcherService"
             android:exported="false"/>
+
+
+        <service
+            android:name="cc.echonet.coolmicapp.MyService"
+            android:enabled="true"
+            android:stopWithTask="false" />
+        <service
+            android:name="cc.echonet.coolmicapp.StreamStatsService"
+            android:exported="false" />
+
+        <activity
+            android:name="cc.echonet.coolmicapp.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="cc.echonet.coolmicapp.MainActivity" />
+        </activity>
+        <activity android:name="cc.echonet.coolmicapp.AboutActivity"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="cc.echonet.coolmicapp.MainActivity" />
+        </activity>
+
+        <activity android:name="cc.echonet.coolmicapp.MainActivity">
+
+
+        </activity>
     </application>
 </manifest>

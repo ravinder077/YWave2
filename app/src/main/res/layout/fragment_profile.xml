@@ -121,7 +121,7 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textSize="15sp"
                 android:textStyle="bold"
-                android:text="Invite a friend"
+                android:text="Live"
                 />
 
         </android.support.v7.widget.CardView>
