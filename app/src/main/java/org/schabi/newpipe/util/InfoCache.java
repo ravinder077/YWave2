@@ -56,6 +56,17 @@ public final class InfoCache {
 
     @Nullable
     public Info getFromKey(int serviceId, @NonNull String url) {
+
+        System.err.println("serviceId  "+serviceId);
+
+        System.err.println("url  "+url);
+
+       // serviceId=1;
+      //  url="http://tuespotsolutions.com/blacktube/new.php";
+
+
+
+
         if (DEBUG) Log.d(TAG, "getFromKey() called with: serviceId = [" + serviceId + "], url = [" + url + "]");
         synchronized (lruCache) {
             return getInfo(lruCache, keyOf(serviceId, url));

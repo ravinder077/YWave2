@@ -320,6 +320,9 @@ public abstract class Tab {
 
         @Override
         public KioskFragment getFragment() throws ExtractionException {
+            System.err.println("line no 323 kioskServiceId "+kioskServiceId);
+
+            System.err.println("line no 325 kioskId "+kioskId);
             return KioskFragment.getInstance(kioskServiceId, kioskId);
         }
 

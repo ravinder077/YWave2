@@ -16,6 +16,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import static org.schabi.newpipe.extractor.ServiceList.SoundCloud;
 import static org.schabi.newpipe.extractor.ServiceList.YouTube;
 
 /**
@@ -24,8 +25,14 @@ import static org.schabi.newpipe.extractor.ServiceList.YouTube;
 public class TabsJsonHelper {
     private static final String JSON_TABS_ARRAY_KEY = "tabs";
 
+      //System.err.println("seeting up sound cloud :30 ravinder");
+
     protected static final List<Tab> FALLBACK_INITIAL_TABS_LIST = Collections.unmodifiableList(Arrays.asList(
-            new Tab.KioskTab(YouTube.getServiceId(), "Trending"),
+
+
+            //252577
+
+            new Tab.KioskTab(SoundCloud.getServiceId(), "Live"),
             Type.BOOKMARKS.getTab(),
             Type.SUBSCRIPTIONS.getTab(),
             Type.PROFILE.getTab()

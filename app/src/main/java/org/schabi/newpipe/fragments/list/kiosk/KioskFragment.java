@@ -64,6 +64,9 @@ public class KioskFragment extends BaseListInfoFragment<KioskInfo> {
 
     public static KioskFragment getInstance(int serviceId)
             throws ExtractionException {
+
+       // System.err.println("serviceId "+serviceId);
+        //serviceId=1;
         return getInstance(serviceId, NewPipe.getService(serviceId)
                 .getKioskList()
                 .getDefaultKioskId());
@@ -71,6 +74,11 @@ public class KioskFragment extends BaseListInfoFragment<KioskInfo> {
 
     public static KioskFragment getInstance(int serviceId, String kioskId)
             throws ExtractionException {
+
+        System.err.println("serviceId "+serviceId);
+       // serviceId=1;
+        System.err.println("kioskId "+kioskId);
+        //kioskId="New & hot";
         KioskFragment instance = new KioskFragment();
         StreamingService service = NewPipe.getService(serviceId);
         ListLinkHandlerFactory kioskLinkHandlerFactory = service.getKioskList()
@@ -88,6 +96,9 @@ public class KioskFragment extends BaseListInfoFragment<KioskInfo> {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        System.err.println("kioskId "+kioskId);
+        System.err.println("activity "+activity);
 
         kioskTranslatedName = KioskTranslator.getTranslatedKioskName(kioskId, activity);
         name = kioskTranslatedName;

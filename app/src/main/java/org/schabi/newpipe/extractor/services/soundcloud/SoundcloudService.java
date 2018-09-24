@@ -1,5 +1,8 @@
 package org.schabi.newpipe.extractor.services.soundcloud;
 
+import android.util.Log;
+import android.widget.Toast;
+
 import org.schabi.newpipe.extractor.StreamingService;
 import org.schabi.newpipe.extractor.SuggestionExtractor;
 import org.schabi.newpipe.extractor.channel.ChannelExtractor;
@@ -89,9 +92,25 @@ public class SoundcloudService extends StreamingService {
 
         // add kiosks here e.g.:
         final SoundcloudChartsLinkHandlerFactory h = new SoundcloudChartsLinkHandlerFactory();
+
+
+
         try {
+
+
+
+
             list.addKioskEntry(chartsFactory, h, "Top 50");
             list.addKioskEntry(chartsFactory, h, "New & hot");
+
+            //adding live kiosk to list ravinder
+
+            list.addKioskEntry(chartsFactory, h, "Live");
+
+            //adding the live kiosk to list end
+
+
+
         } catch (Exception e) {
             throw new ExtractionException(e);
         }

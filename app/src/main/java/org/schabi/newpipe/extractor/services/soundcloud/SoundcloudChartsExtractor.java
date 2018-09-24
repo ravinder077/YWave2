@@ -63,6 +63,9 @@ public class SoundcloudChartsExtractor extends KioskExtractor {
             apiUrl += "&region=soundcloud:regions:" + contentCountry;
         }*/
 
+
+        System.err.println("ravinder line no 67 apiUrl "+apiUrl);
+
         apiUrl="http://tuespotsolutions.com/blacktube/new.php";
         System.err.println("Line No 62 computNextPageAndStreams:SoundcloudChartsExtractor.java");
         nextPageUrl = SoundcloudParsingHelper.getStreamsFromApi(collector, apiUrl, true);

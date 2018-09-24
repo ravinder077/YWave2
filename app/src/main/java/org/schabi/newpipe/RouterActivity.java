@@ -95,6 +95,8 @@ public class RouterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         Icepick.restoreInstanceState(this, savedInstanceState);
 
+        System.err.println("line no 98  currentUrl : "+currentUrl);
+
         if (TextUtils.isEmpty(currentUrl)) {
             currentUrl = getUrl(getIntent());
 
@@ -132,10 +134,25 @@ public class RouterActivity extends AppCompatActivity {
         disposables.add(Observable
                 .fromCallable(() -> {
                     if (currentServiceId == -1) {
+
+
+                        System.err.println("line no 139 currentServiceId" +currentServiceId);
+
                         currentService = NewPipe.getServiceByUrl(url);
                         currentServiceId = currentService.getServiceId();
                         currentLinkType = currentService.getLinkTypeByUrl(url);
                         currentUrl = url;
+
+                        System.err.println("line no 145 currentService" +currentService);
+
+                        System.err.println("line no 148 currentServiceId" +currentServiceId);
+
+
+                        System.err.println("line no 151 currentLinkType" +currentLinkType);
+
+
+                        System.err.println("line no 151 url" +url);
+
                     } else {
                         currentService = NewPipe.getService(currentServiceId);
                     }

@@ -337,11 +337,21 @@ public class ChannelFragment extends BaseListInfoFragment<ChannelInfo> {
 
     private Consumer<List<SubscriptionEntity>> getSubscribeUpdateMonitor(final ChannelInfo info) {
         return (List<SubscriptionEntity> subscriptionEntities) -> {
+
+
+
+            for(SubscriptionEntity entity:subscriptionEntities)
+            {
+                System.err.println("subscriptionEntities " + entity.getName());
+            }
             if (DEBUG)
                 Log.d(TAG, "subscriptionService.subscriptionTable.doOnNext() called with: subscriptionEntities = [" + subscriptionEntities + "]");
             if (subscribeButtonMonitor != null) subscribeButtonMonitor.dispose();
 
             if (subscriptionEntities.isEmpty()) {
+
+
+
                 if (DEBUG) Log.d(TAG, "No subscription to this channel!");
                 SubscriptionEntity channel = new SubscriptionEntity();
                 channel.setServiceId(info.getServiceId());
@@ -352,6 +362,8 @@ public class ChannelFragment extends BaseListInfoFragment<ChannelInfo> {
                         info.getSubscriberCount());
                 subscribeButtonMonitor = monitorSubscribeButton(headerSubscribeButton, mapOnSubscribe(channel));
             } else {
+
+
                 if (DEBUG) Log.d(TAG, "Found subscription to this channel!");
                 final SubscriptionEntity subscription = subscriptionEntities.get(0);
                 subscribeButtonMonitor = monitorSubscribeButton(headerSubscribeButton, mapOnUnsubscribe(subscription));
@@ -440,6 +452,8 @@ public class ChannelFragment extends BaseListInfoFragment<ChannelInfo> {
         if (subscribeButtonMonitor != null) subscribeButtonMonitor.dispose();
         updateSubscription(result);
         monitorSubscription(result);
+
+
 
         headerPlayAllButton.setOnClickListener(
                 view -> NavigationHelper.playOnMainPlayer(activity, getPlayQueue()));

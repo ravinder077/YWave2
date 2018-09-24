@@ -85,6 +85,14 @@ public class SubscriptionFragment extends BaseStateFragment<List<SubscriptionEnt
     private View whatsNewItemListHeader;
     private View importExportListHeader;
 
+
+    //added new view create new ravinder
+
+
+    private View createnewListHeader;
+
+    //aded new view ends
+
     @State
     protected Parcelable importExportOptionsState;
     private CollapsibleView importExportOptions;
@@ -292,9 +300,24 @@ public class SubscriptionFragment extends BaseStateFragment<List<SubscriptionEnt
         itemsList.setLayoutManager(new LinearLayoutManager(activity));
 
         infoListAdapter.setHeader(headerRootLayout = activity.getLayoutInflater().inflate(R.layout.subscription_header, itemsList, false));
+
+        createnewListHeader=headerRootLayout.findViewById(R.id.create_new);
+
         whatsNewItemListHeader = headerRootLayout.findViewById(R.id.whats_new);
+
+
+
+
         importExportListHeader = headerRootLayout.findViewById(R.id.import_export);
         importExportOptions = headerRootLayout.findViewById(R.id.import_export_options);
+
+        //hidding the whats new and import excport starts ravinder
+
+        whatsNewItemListHeader.setVisibility(View.GONE);
+        importExportListHeader.setVisibility(View.GONE);
+        importExportOptions.setVisibility(View.GONE);
+        //hidding the whats new and import excport ends ravinder
+
 
         infoListAdapter.useMiniItemVariants(true);
         itemsList.setAdapter(infoListAdapter);
@@ -362,6 +385,8 @@ public class SubscriptionFragment extends BaseStateFragment<List<SubscriptionEnt
         return new Observer<List<SubscriptionEntity>>() {
             @Override
             public void onSubscribe(Disposable d) {
+
+                System.err.println("i m Subscribe");
                 showLoading();
                 disposables.add(d);
             }

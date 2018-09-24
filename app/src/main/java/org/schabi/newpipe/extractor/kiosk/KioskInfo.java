@@ -59,6 +59,8 @@ public class KioskInfo extends ListInfo<StreamInfoItem> {
     public static KioskInfo getInfo(StreamingService service,
                                     String url,
                                     String contentCountry) throws IOException, ExtractionException {
+
+
         KioskList kl = service.getKioskList();
 
         System.err.println("Setting extractor url and counteruy and nextpageurl");
