@@ -73,4 +73,12 @@
     <color name="black">#000</color>
     <color name="gray_transparent">#be757575</color>
 
+
+    <color name="login">#8941f5</color>
+    <color name="signup">#3dde75</color>
+    <color name="google">#ff404a</color>
+    <color name="facebook">#4043ff</color>
+    <color name="twiter">#40c3ff</color>
+    <color name="instagram">#fa9435</color>
+
 </resources>
