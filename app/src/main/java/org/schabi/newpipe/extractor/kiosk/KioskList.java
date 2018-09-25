@@ -98,6 +98,8 @@ public  class KioskList {
     }
 
     public ListLinkHandlerFactory getListLinkHandlerFactoryByType(String type) {
+
+        System.err.println("line no 102 ravinder type"+type);
         return kioskList.get(type).handlerFactory;
     }
 }

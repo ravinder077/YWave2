@@ -123,13 +123,24 @@ public class MainActivity extends AppCompatActivity {
     private void setupDrawer() throws Exception {
         final Toolbar toolbar = findViewById(R.id.toolbar);
         drawer = findViewById(R.id.drawer_layout);
+
+
         drawerItems = findViewById(R.id.navigation);
 
         //Tabs
+
+
         int currentServiceId = ServiceHelper.getSelectedServiceId(this);
         StreamingService service = NewPipe.getService(currentServiceId);
 
-        int kioskId = 0;
+        System.err.println("currentServiceId "+currentServiceId);
+
+
+
+        //setting the dafult player is sound cloud
+        int kioskId = 1;
+
+        //seeting the default player is sound cloud ends
 
         for (final String ks : service.getKioskList().getAvailableKiosks()) {
             drawerItems.getMenu()
@@ -165,6 +176,7 @@ public class MainActivity extends AppCompatActivity {
         toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.drawer_open, R.string.drawer_close);
         toggle.syncState();
         drawer.addDrawerListener(toggle);
+
         drawer.addDrawerListener(new DrawerLayout.SimpleDrawerListener() {
             private int lastService;
 
@@ -270,6 +282,10 @@ public class MainActivity extends AppCompatActivity {
         serviceArrow = hView.findViewById(R.id.drawer_arrow);
         headerServiceView = hView.findViewById(R.id.drawer_header_service_view);
         Button action = hView.findViewById(R.id.drawer_header_action_button);
+
+        serviceArrow.setVisibility(View.GONE);
+                headerServiceView.setVisibility(View.GONE);
+        action.setVisibility(View.GONE);
         action.setOnClickListener(view -> {
             toggleServices();
         });

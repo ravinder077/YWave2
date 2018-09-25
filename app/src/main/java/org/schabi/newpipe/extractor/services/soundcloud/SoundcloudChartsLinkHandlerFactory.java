@@ -33,12 +33,26 @@ public class SoundcloudChartsLinkHandlerFactory extends ListLinkHandlerFactory {
         if (id.equals("Top 50")) {
             return "http://tuespotsolutions.com/blacktube/new.php";
         }
+
+        //matching the Live ravinder starts
         else if (id.equals("Live")) {
 
             System.err.println("Live matyching settings starts ravinder line no 38");
-            //matching the Live ravinder starts
+
             return "http://tuespotsolutions.com/blacktube/new.php";
         }
+        //matching the Live ravinder starts
+        //matching the Live ravinder starts
+        else if (id.equals("Home")) {
+
+            System.err.println("Home matyching settings starts ravinder line no 44");
+
+            return "http://tuespotsolutions.com/blacktube/new.php";
+        }
+
+        //matching the Live ravinder ends
+
+
         else {
             return "http://tuespotsolutions.com/blacktube/new.php";
         }

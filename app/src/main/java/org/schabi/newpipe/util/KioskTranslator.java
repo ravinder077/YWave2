@@ -34,6 +34,7 @@ public class KioskTranslator {
                 return c.getString(R.string.top_50);
             case "New & hot":
                 return c.getString(R.string.new_and_hot);
+
             default:
                 return kioskId;
         }
@@ -53,8 +54,17 @@ public class KioskTranslator {
 
                 //ravinder line no 54 starts
             case "Live":
-                return ThemeHelper.resolveResourceIdFromAttr(c, R.attr.ic_hot);
+                return ThemeHelper.resolveResourceIdFromAttr(c, R.attr.ic_bookmark);
             //ravinder line no 54 ends
+
+            //ravinder line no 59 starts
+            case "Home":
+                System.err.println("Setting icon for Home line no 61");
+                return ThemeHelper.resolveResourceIdFromAttr(c, R.attr.ic_hot);
+            //ravinder line no 59 ends
+
+
+
             default:
                 return 0;
         }

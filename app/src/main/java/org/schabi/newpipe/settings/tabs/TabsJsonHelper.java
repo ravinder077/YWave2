@@ -32,8 +32,8 @@ public class TabsJsonHelper {
 
             //252577
 
+            new Tab.KioskTab(SoundCloud.getServiceId(), "New & hot"),
             new Tab.KioskTab(SoundCloud.getServiceId(), "Live"),
-            Type.BOOKMARKS.getTab(),
             Type.SUBSCRIPTIONS.getTab(),
             Type.PROFILE.getTab()
     ));

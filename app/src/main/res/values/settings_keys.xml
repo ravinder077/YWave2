@@ -6,8 +6,10 @@
         <item>@string/soundcloud</item>
     </string-array>
     <string name="current_service_key" translatable="false">service</string>
-    <string name="default_service_value" translatable="false">@string/youtube</string>
 
+    <!--setting current services as sound cloud ravinder -->
+    <string name="default_service_value" translatable="false">@string/soundcloud</string>
+    <!--setting current services as sound cloud ravinder -->
     <string name="saved_tabs_key" translatable="false">saved_tabs_key</string>
 
     <!-- Key values -->
