@@ -47,15 +47,30 @@ public class SoundcloudChartsExtractor extends KioskExtractor {
     private void computNextPageAndStreams() throws IOException, ExtractionException {
         collector = new StreamInfoItemsCollector(getServiceId());
 
-        String apiUrl = "https://api-v2.soundcloud.com/charts" +
+        /*String apiUrl = "https://api-v2.soundcloud.com/charts" +
                 "?genre=soundcloud:genres:all-music" +
-                "&client_id=" + SoundcloudParsingHelper.clientId();
+                "&client_id=" + SoundcloudParsingHelper.clientId(); */
 
-        if (getId().equals("Top 50")) {
+
+     /*   if (getId().equals("Top 50")) {
             apiUrl += "&kind=top";
         } else {
             apiUrl += "&kind=trending";
+        }*/
+        String apiUrl="http://tuespotsolutions.com/blacktube/";
+
+
+        System.err.println("line no 63 getId()"+getId());
+
+        if (getId().equals("Home")) {
+            apiUrl += "tab1.php";
+        } else if(getId().equals("Live")) {
+
+            apiUrl += "tab2.php";
         }
+
+
+
 
         /*List<String> supportedCountries = Arrays.asList("AU", "CA", "FR", "DE", "IE", "NL", "NZ", "GB", "US");
         String contentCountry = getContentCountry();
@@ -66,7 +81,7 @@ public class SoundcloudChartsExtractor extends KioskExtractor {
 
         System.err.println("ravinder line no 67 apiUrl "+apiUrl);
 
-        apiUrl="http://tuespotsolutions.com/blacktube/new.php";
+      //  apiUrl="http://tuespotsolutions.com/blacktube/new.php";
         System.err.println("Line No 62 computNextPageAndStreams:SoundcloudChartsExtractor.java");
         nextPageUrl = SoundcloudParsingHelper.getStreamsFromApi(collector, apiUrl, true);
         System.err.println("Line No 66 computNextPageAndStreams:SoundcloudChartsExtractor.java");

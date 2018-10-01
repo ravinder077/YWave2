@@ -46,6 +46,8 @@ public class KioskInfo extends ListInfo<StreamInfoItem> {
                                                                            String pageUrl,
                                                                            String contentCountry) throws IOException, ExtractionException {
         KioskList kl = service.getKioskList();
+
+        System.err.println("calling the getextractor line no 50 "+kl.toString());
         KioskExtractor extractor = kl.getExtractorByUrl(url, pageUrl);
         extractor.setContentCountry(contentCountry);
         return extractor.getPage(pageUrl);
@@ -63,16 +65,16 @@ public class KioskInfo extends ListInfo<StreamInfoItem> {
 
         KioskList kl = service.getKioskList();
 
-        System.err.println("Setting extractor url and counteruy and nextpageurl");
+        System.err.println("#################  Setting extractor url and counteruy and nextpageurl");
 
-        System.err.println("String url  "+url);
-        System.err.println("String contentCountry  "+contentCountry);
-        System.err.println("String service  "+service.toString());
+        System.err.println("#################  String url  "+url);
+        System.err.println("#################  String contentCountry  "+contentCountry);
+        System.err.println("#################  String service  "+service.toString());
 
-        System.err.println("String KioskList  "+kl.getExtractorByUrl(url,null));
+        //System.err.println("String KioskList  "+kl.getExtractorByUrl(url,null));
 
 
-        System.err.println("extractor intialization");
+        System.err.println("################  extractor intialization");
 
 
 

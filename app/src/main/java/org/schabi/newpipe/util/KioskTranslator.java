@@ -25,7 +25,7 @@ import org.schabi.newpipe.R;
 public class KioskTranslator {
     public static String getTranslatedKioskName(String kioskId, Context c) {
 
-        System.err.println("line no 28 kioskId"+kioskId);
+        System.err.println("line no 28  KioskTranslator kioskId "+kioskId);
 
         switch (kioskId) {
             case "Trending":
@@ -34,7 +34,10 @@ public class KioskTranslator {
                 return c.getString(R.string.top_50);
             case "New & hot":
                 return c.getString(R.string.new_and_hot);
-
+            case "Live":
+                 return "Live";
+            case "Home":
+                return "Home";
             default:
                 return kioskId;
         }

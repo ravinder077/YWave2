@@ -15,6 +15,7 @@ import org.schabi.newpipe.fragments.BlankFragment;
 import org.schabi.newpipe.fragments.ProfileFragment;
 import org.schabi.newpipe.fragments.list.channel.ChannelFragment;
 import org.schabi.newpipe.fragments.list.kiosk.KioskFragment;
+import org.schabi.newpipe.fragments.list.kiosk.LiveFragment;
 import org.schabi.newpipe.local.bookmark.BookmarkFragment;
 import org.schabi.newpipe.local.feed.FeedFragment;
 import org.schabi.newpipe.local.history.StatisticsPlaylistFragment;
@@ -110,6 +111,13 @@ public abstract class Tab {
             switch (type) {
                 case KIOSK:
                     return new KioskTab(jsonObject);
+
+                 //live tab added ravinder
+                case LIVE:
+                    return new LiveTab(jsonObject);
+
+                 //ravinder
+
                 case CHANNEL:
                     return new ChannelTab(jsonObject);
             }
@@ -131,6 +139,13 @@ public abstract class Tab {
         BOOKMARKS(new BookmarksTab()),
         HISTORY(new HistoryTab()),
         KIOSK(new KioskTab()),
+
+        //added live tab starts
+
+        LIVE(new LiveTab()),
+
+        //added live tabs ends
+
         CHANNEL(new ChannelTab());
 
         private Tab tab;
@@ -273,6 +288,89 @@ public abstract class Tab {
             return new StatisticsPlaylistFragment();
         }
     }
+
+
+    //starts
+
+    public static class LiveTab extends Tab {
+        public static final int ID = 5;
+
+        private int kioskServiceId;
+        private String kioskId;
+
+        private static final String JSON_KIOSK_SERVICE_ID_KEY = "service_id";
+        private static final String JSON_KIOSK_ID_KEY = "kiosk_id";
+
+        private LiveTab() {
+            this(-1, "<no-id>");
+        }
+
+        public LiveTab(int kioskServiceId, String kioskId) {
+            this.kioskServiceId = kioskServiceId;
+            this.kioskId = kioskId;
+        }
+
+        public LiveTab(JsonObject jsonObject) {
+            super(jsonObject);
+        }
+
+        @Override
+        public int getTabId() {
+            return ID;
+        }
+
+        @Override
+        public String getTabName(Context context) {
+            return KioskTranslator.getTranslatedKioskName(kioskId, context);
+        }
+
+        @DrawableRes
+        @Override
+        public int getTabIconRes(Context context) {
+            final int kioskIcon = KioskTranslator.getKioskIcons(kioskId, context);
+
+            if (kioskIcon <= 0) {
+                throw new IllegalStateException("Kiosk ID is not valid: \"" + kioskId + "\"");
+            }
+
+            return kioskIcon;
+        }
+
+        @Override
+        public LiveFragment getFragment() throws ExtractionException {
+            System.err.println("line no 323 kioskServiceId "+kioskServiceId);
+
+            System.err.println("line no 325 kioskId "+kioskId);
+            return LiveFragment.getInstance(kioskServiceId, kioskId);
+        }
+
+        @Override
+        protected void writeDataToJson(JsonSink writerSink) {
+            writerSink.value(JSON_KIOSK_SERVICE_ID_KEY, kioskServiceId)
+                    .value(JSON_KIOSK_ID_KEY, kioskId);
+        }
+
+        @Override
+        protected void readDataFromJson(JsonObject jsonObject) {
+            kioskServiceId = jsonObject.getInt(JSON_KIOSK_SERVICE_ID_KEY, -1);
+            kioskId = jsonObject.getString(JSON_KIOSK_ID_KEY, "<no-id>");
+        }
+
+        public int getKioskServiceId() {
+            return kioskServiceId;
+        }
+
+        public String getKioskId() {
+            return kioskId;
+        }
+    }
+
+
+    //ends
+
+
+
+
 
     public static class KioskTab extends Tab {
         public static final int ID = 5;

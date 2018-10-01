@@ -5,7 +5,6 @@ import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBar;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -19,8 +18,6 @@ import org.schabi.newpipe.extractor.StreamingService;
 import org.schabi.newpipe.extractor.exceptions.ExtractionException;
 import org.schabi.newpipe.extractor.kiosk.KioskInfo;
 import org.schabi.newpipe.extractor.linkhandler.ListLinkHandlerFactory;
-import org.schabi.newpipe.extractor.linkhandler.ListLinkHandler;
-import org.schabi.newpipe.extractor.linkhandler.LinkHandlerFactory;
 import org.schabi.newpipe.fragments.list.BaseListInfoFragment;
 import org.schabi.newpipe.report.UserAction;
 import org.schabi.newpipe.util.ExtractorHelper;
@@ -51,7 +48,7 @@ import static org.schabi.newpipe.util.AnimationUtils.animateView;
  * along with NewPipe.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-public class KioskFragment extends BaseListInfoFragment<KioskInfo> {
+public class LiveFragment extends BaseListInfoFragment<KioskInfo> {
 
     @State
     protected String kioskId = "";
@@ -62,7 +59,7 @@ public class KioskFragment extends BaseListInfoFragment<KioskInfo> {
     // Views
     //////////////////////////////////////////////////////////////////////////*/
 
-    public static KioskFragment getInstance(int serviceId)
+    public static LiveFragment getInstance(int serviceId)
             throws ExtractionException {
 
        // System.err.println("serviceId "+serviceId);
@@ -72,14 +69,14 @@ public class KioskFragment extends BaseListInfoFragment<KioskInfo> {
                 .getDefaultKioskId());
     }
 
-    public static KioskFragment getInstance(int serviceId, String kioskId)
+    public static LiveFragment getInstance(int serviceId, String kioskId)
             throws ExtractionException {
 
         System.err.println("serviceId "+serviceId);
        // serviceId=1;
         System.err.println("kioskId "+kioskId);
         //kioskId="New & hot";
-        KioskFragment instance = new KioskFragment();
+        LiveFragment instance = new LiveFragment();
         StreamingService service = NewPipe.getService(serviceId);
 
 
@@ -112,7 +109,7 @@ public class KioskFragment extends BaseListInfoFragment<KioskInfo> {
         super.setUserVisibleHint(isVisibleToUser);
         if(useAsFrontPage && isVisibleToUser && activity != null) {
             try {
-                setTitle("Home");
+                setTitle("Live");
             } catch (Exception e) {
                 onUnrecoverableError(e, UserAction.UI_ERROR,
                         "none",

@@ -10,8 +10,11 @@ public class SoundcloudChartsLinkHandlerFactory extends ListLinkHandlerFactory {
   //  private final String URL_PATTERN = "^https?://(www\\.|m\\.)?soundcloud.com/charts(/top|/new)?/?([#?].*)?$";
 
 
-       private final String TOP_URL_PATTERN = "http://tuespotsolutions.com/blacktube/new.php";
-        private final String URL_PATTERN = "http://tuespotsolutions.com/blacktube/new.php";
+       private final String TOP_URL_PATTERN = "http://tuespotsolutions.com/blacktube/tab1.php";
+       private final String URL_PATTERN = "http://tuespotsolutions.com/blacktube/new.php";
+       private final String LIVE_URL_PATTERN = "http://tuespotsolutions.com/blacktube/tab2.php";
+
+    //private final String URL_PATTERN = "http://tuespotsolutions.com/blacktube/tab1.php";
 
     @Override
     public String getId(String url) {
@@ -19,9 +22,14 @@ public class SoundcloudChartsLinkHandlerFactory extends ListLinkHandlerFactory {
         System.err.println("line no 19  url"+url);
 
         if (Parser.isMatch(TOP_URL_PATTERN, url.toLowerCase())) {
-            return "Top 50";
-        } else {
-            return "New & hot";
+            return "Home";
+        } else if(Parser.isMatch(LIVE_URL_PATTERN, url.toLowerCase()))
+        {
+            return "Live";
+        }
+        else
+        {
+            return "Home";
         }
     }
 
@@ -39,7 +47,10 @@ public class SoundcloudChartsLinkHandlerFactory extends ListLinkHandlerFactory {
 
             System.err.println("Live matyching settings starts ravinder line no 38");
 
-            return "http://tuespotsolutions.com/blacktube/new.php";
+           // return "http://tuespotsolutions.com/blacktube/new.php";
+           return "http://tuespotsolutions.com/blacktube/tab2.php";
+
+           // return "https://soundcloud.com/charts/top";
         }
         //matching the Live ravinder starts
         //matching the Live ravinder starts
@@ -47,7 +58,12 @@ public class SoundcloudChartsLinkHandlerFactory extends ListLinkHandlerFactory {
 
             System.err.println("Home matyching settings starts ravinder line no 44");
 
-            return "http://tuespotsolutions.com/blacktube/new.php";
+           // return "http://tuespotsolutions.com/blacktube/live.php";
+
+           // return "https://soundcloud.com/charts/new";
+
+            return "http://tuespotsolutions.com/blacktube/tab1.php";
+
         }
 
         //matching the Live ravinder ends
@@ -60,6 +76,13 @@ public class SoundcloudChartsLinkHandlerFactory extends ListLinkHandlerFactory {
 
     @Override
     public boolean onAcceptUrl(final String url) {
-        return Parser.isMatch(URL_PATTERN, url.toLowerCase());
+
+
+
+        System.err.println("line no 82 url "+url);
+        //return Parser.isMatch(URL_PATTERN, url.toLowerCase());
+
+        //always true url checking ravinder
+        return true;
     }
 }

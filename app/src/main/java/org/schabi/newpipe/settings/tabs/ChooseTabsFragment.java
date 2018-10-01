@@ -307,6 +307,12 @@ public class ChooseTabsFragment extends Fragment {
                     case KIOSK:
                         tabName = NewPipe.getNameOfService(((Tab.KioskTab) tab).getKioskServiceId()) + "/" + tabName;
                         break;
+                    //live tab starts
+
+                    case LIVE:
+                        tabName = NewPipe.getNameOfService(((Tab.LiveTab) tab).getKioskServiceId()) + "/" + tabName;
+                        break;
+                    //live tab ends
                     case CHANNEL:
                         tabName = NewPipe.getNameOfService(((Tab.ChannelTab) tab).getChannelServiceId()) + "/" + tabName;
                         break;

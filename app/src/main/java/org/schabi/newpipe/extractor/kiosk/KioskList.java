@@ -1,5 +1,7 @@
 package org.schabi.newpipe.extractor.kiosk;
 
+import android.util.Log;
+
 import org.schabi.newpipe.extractor.NewPipe;
 import org.schabi.newpipe.extractor.StreamingService;
 import org.schabi.newpipe.extractor.exceptions.ExtractionException;
@@ -40,6 +42,9 @@ public  class KioskList {
         if(kioskList.get(id) != null) {
             throw new Exception("Kiosk with type " + id + " already exists.");
         }
+
+        System.err.println("**************  line no 46 id"+id);
+
         kioskList.put(id, new KioskEntry(extractorFactory, handlerFactory));
     }
 
@@ -84,15 +89,37 @@ public  class KioskList {
     public KioskExtractor getExtractorByUrl(String url, String nextPageUrl)
             throws ExtractionException, IOException {
 
-        System.err.println("line no 87: getAvailableKiosks "+url);
+        System.err.println("line no 87: getAvailableKiosks  url"+url);
 
-        System.err.println("line no 87: getAvailableKiosks "+nextPageUrl);
+        System.err.println("line no 87: getAvailableKiosks  nextPageUrl"+nextPageUrl);
 
         for(Map.Entry<String, KioskEntry> e : kioskList.entrySet()) {
+
+
+
             KioskEntry ke = e.getValue();
-            if(ke.handlerFactory.acceptUrl(url)) {
+
+            System.err.println("line no 96 getAvailableKiosks"+ke.handlerFactory.acceptUrl(url));
+
+            System.err.println("line no 98 "+e.getKey() +" hh "+ke.extractorFactory.toString());
+
+            System.err.println("line no 106 "+e.getKey() +" hhhhh "+url);
+
+            if("http://tuespotsolutions.com/blacktube/tab1.php".equalsIgnoreCase(url))
+            {
+                return getExtractorById("Home", nextPageUrl);
+            }
+            else if("http://tuespotsolutions.com/blacktube/tab2.php".equalsIgnoreCase(url))
+            {
+                return getExtractorById("Live", nextPageUrl);
+            }
+
+          /*  if(ke.handlerFactory.acceptUrl(url)) {
+
                 return getExtractorById(e.getKey(), nextPageUrl);
             }
+
+            */
         }
         throw new ExtractionException("Could not find a kiosk that fits to the url: " + url);
     }
@@ -100,6 +127,16 @@ public  class KioskList {
     public ListLinkHandlerFactory getListLinkHandlerFactoryByType(String type) {
 
         System.err.println("line no 102 ravinder type"+type);
-        return kioskList.get(type).handlerFactory;
+
+        if(type!=null) {
+
+            Log.d("hello","inside if line no 106 getListLinkHandlerFactoryByType");
+            return kioskList.get(type).handlerFactory;
+        }
+        else
+        {
+            Log.d("hello1","inside else line no 111 getListLinkHandlerFactoryByType");
+            return null;
+        }
     }
 }

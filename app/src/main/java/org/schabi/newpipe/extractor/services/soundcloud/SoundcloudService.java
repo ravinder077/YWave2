@@ -98,17 +98,24 @@ public class SoundcloudService extends StreamingService {
         try {
 
 
+            list.addKioskEntry(chartsFactory, h, "Home");
+            list.addKioskEntry(chartsFactory, h, "Live");
 
+          //  list.addKioskEntry(chartsFactory, h, "Top 50");
 
-            list.addKioskEntry(chartsFactory, h, "Top 50");
-            list.addKioskEntry(chartsFactory, h, "New & hot");
+          //  list.addKioskEntry(chartsFactory, h, "New & hot");
 
             //adding live kiosk to list ravinder
 
-            list.addKioskEntry(chartsFactory, h, "Live");
+
 
             //adding the live kiosk to list end
 
+            //adding Home kiosk to list ravinder
+
+
+
+            //adding the Home kiosk to list end
 
 
         } catch (Exception e) {

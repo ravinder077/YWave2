@@ -142,12 +142,12 @@ public class MainActivity extends AppCompatActivity {
 
         //seeting the default player is sound cloud ends
 
-        for (final String ks : service.getKioskList().getAvailableKiosks()) {
+      /*  for (final String ks : service.getKioskList().getAvailableKiosks()) {
             drawerItems.getMenu()
                     .add(R.id.menu_tabs_group, kioskId, 0, KioskTranslator.getTranslatedKioskName(ks, this))
                     .setIcon(KioskTranslator.getKioskIcons(ks, this));
             kioskId ++;
-        }
+        }  */
 
         drawerItems.getMenu()
                 .add(R.id.menu_tabs_group, ITEM_ID_SUBSCRIPTIONS, ORDER, R.string.tab_subscriptions)
