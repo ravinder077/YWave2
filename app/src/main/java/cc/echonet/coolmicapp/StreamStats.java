@@ -2,7 +2,7 @@ package cc.echonet.coolmicapp;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import org.schabi.newpipe.R;
+
 /**
  * Created by stephanj on 21.03.2016.
  */

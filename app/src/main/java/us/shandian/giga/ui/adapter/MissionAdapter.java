@@ -24,8 +24,8 @@ import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.download.DeleteDownloadManager;
+import tuespotsolutions.com.youwave.R;
+import tuespotsolutions.com.youwave.download.DeleteDownloadManager;
 
 import java.io.File;
 import java.lang.ref.WeakReference;

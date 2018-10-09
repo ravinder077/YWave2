@@ -20,8 +20,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.download.DeleteDownloadManager;
+import tuespotsolutions.com.youwave.R;
+import tuespotsolutions.com.youwave.download.DeleteDownloadManager;
 
 import io.reactivex.disposables.Disposable;
 import us.shandian.giga.get.DownloadManager;

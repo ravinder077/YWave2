@@ -1,7 +1,7 @@
 package cc.echonet.coolmicapp;
 
 import android.Manifest;
-import org.schabi.newpipe.R;
+
 /**
  * Created by stephanj on 21.03.2016.
  */

@@ -25,7 +25,7 @@ package cc.echonet.coolmicapp;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
-import org.schabi.newpipe.R;
+import tuespotsolutions.com.youwave.R;
 public class CoolMic {
      SharedPreferences prefs = null;
      Context context = null;

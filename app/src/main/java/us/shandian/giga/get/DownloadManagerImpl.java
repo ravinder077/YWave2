@@ -7,7 +7,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
-import org.schabi.newpipe.download.ExtSDDownloadFailedActivity;
+import tuespotsolutions.com.youwave.download.ExtSDDownloadFailedActivity;
 
 import java.io.File;
 import java.io.FilenameFilter;
@@ -24,7 +24,7 @@ import java.util.List;
 
 import us.shandian.giga.util.Utility;
 
-import static org.schabi.newpipe.BuildConfig.DEBUG;
+import static tuespotsolutions.com.youwave.BuildConfig.DEBUG;
 
 public class DownloadManagerImpl implements DownloadManager {
     private static final String TAG = DownloadManagerImpl.class.getSimpleName();

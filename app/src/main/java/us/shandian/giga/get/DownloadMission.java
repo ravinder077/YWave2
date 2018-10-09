@@ -16,7 +16,7 @@ import java.util.Map;
 
 import us.shandian.giga.util.Utility;
 
-import static org.schabi.newpipe.BuildConfig.DEBUG;
+import static tuespotsolutions.com.youwave.BuildConfig.DEBUG;
 
 public class DownloadMission implements Serializable {
     private static final long serialVersionUID = 0L;

@@ -26,7 +26,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
-import org.schabi.newpipe.R;
+
 public class ScreenReceiver extends BroadcastReceiver {
 
     private static final int LED_NOTIFICATION_ID = 0;

@@ -22,7 +22,6 @@
  */
 package cc.echonet.coolmicapp;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -48,7 +47,6 @@ import android.os.Handler;
 import android.os.SystemClock;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -63,8 +61,8 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.support.v7.widget.Toolbar;
-import org.schabi.newpipe.R;
+
+import tuespotsolutions.com.youwave.R;
 
 import java.util.Locale;
 import java.util.concurrent.locks.ReentrantLock;

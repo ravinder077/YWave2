@@ -7,7 +7,7 @@ android {
     buildToolsVersion '27.0.3'
 
     defaultConfig {
-       // applicationId "org.schabi.newpipe"
+        applicationId "tuespotsolutions.com.youwave"
         applicationId "cc.cc.echonet.coolmicapp"
         minSdkVersion 16
         targetSdkVersion 27

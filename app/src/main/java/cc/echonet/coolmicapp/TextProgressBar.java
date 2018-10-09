@@ -7,7 +7,7 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.widget.ProgressBar;
-import org.schabi.newpipe.R;
+
 /**
  * http://colintmiller.com/how-to-add-text-over-a-progress-bar-on-android/
  */

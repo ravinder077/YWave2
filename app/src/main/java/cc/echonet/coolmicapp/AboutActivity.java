@@ -10,11 +10,10 @@ import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import org.schabi.newpipe.BuildConfig;
-import org.schabi.newpipe.R;
+import tuespotsolutions.com.youwave.BuildConfig;
+import tuespotsolutions.com.youwave.R;
 public class AboutActivity extends Activity {
 
     ClipboardManager myClipboard;

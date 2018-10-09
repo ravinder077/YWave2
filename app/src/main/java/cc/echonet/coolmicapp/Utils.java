@@ -12,7 +12,7 @@ import android.widget.Toast;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.UUID;
-import org.schabi.newpipe.R;
+import tuespotsolutions.com.youwave.R;
 /**
  * Created by stjauernick@de.loewenfelsen.net on 10/13/16.
  */
